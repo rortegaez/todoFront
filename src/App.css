@@ -1,0 +1,18 @@
+body{
+	background-color: rgb(112, 99, 236);
+	display: flex;
+	text-align: center;
+	justify-content: center;
+}
+
+.App{
+	display: flex;
+	flex-direction: column;
+	margin: 5em;
+	border: 10px solid silver;
+	border-radius: 20px;
+	background-color: #3843dd;
+	padding: 3em;
+	border-style: outset;
+	box-shadow: 3px 3px 5px;
+}

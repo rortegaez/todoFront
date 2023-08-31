@@ -1,0 +1,12 @@
+.containerListItems {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  width: 30em;
+  background-color: rgb(148, 183, 247);
+  margin-top: 20px;
+  border: 5px solid silver;
+  border-radius: 20px;
+  border-style: inset;
+}

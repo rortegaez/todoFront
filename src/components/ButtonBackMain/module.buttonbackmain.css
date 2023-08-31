@@ -1,0 +1,17 @@
+.buttonBack {
+	height: 4em;
+	border-radius: 25px;
+	margin-top: 2em;
+	width: 12em;
+	background-color: aqua;
+	border: 5px solid silver;
+	border-style: outset;
+	box-shadow: 3px 3px 5px;
+	font-weight: bold;
+	font-size: 1.05em;
+}
+
+.buttonBack:active {
+	border-style: inset;
+	background-color: rgb(125, 218, 218);
+}
