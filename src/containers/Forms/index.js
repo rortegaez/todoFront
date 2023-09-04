@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import styles from "./module.forms.css";
+import styles from "./forms.module.css";
 
 //import myDate from '../../function/myDate'
 
@@ -32,13 +32,13 @@ const Forms = () => {
 
   return (
     <div>
-      <form className="containerForms" onSubmit={handleSubmit(onSubmit)}>
+      <form className={styles.containerForms} onSubmit={handleSubmit(onSubmit)}>
         <h2>Crear nueva tarea</h2>
 
         <input
           type="text"
           placeholder="titulo"
-          className="containerTittle"
+          className={styles.containerTitle}
           {...register("title", {
             required: {
               value: true,
@@ -51,7 +51,7 @@ const Forms = () => {
         <input
           type="text"
           placeholder="tarea"
-          className="containerTask"
+          className={styles.containerTask}
           {...register("task", {
             required: {
               value: true,
@@ -69,7 +69,7 @@ const Forms = () => {
 
         <input
           type="date"
-          className="containerDate"
+          className={styles.containerDate}
           {...register("limit", {
             required: {
               value: true,
@@ -78,7 +78,7 @@ const Forms = () => {
           })}
         />
 
-        <button className="containerButton">Add task</button>
+        <button className={styles.containerButton}>Add task</button>
       </form>
     </div>
   );

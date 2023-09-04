@@ -1,0 +1,72 @@
+.containerForms {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerTitle {
+  height: 35px;
+  border-radius: 10px;
+  margin: 10px;
+  width: 400px;
+  text-align: center;
+  border: 3px solid silver;
+  border-style: inset;
+}
+
+.containerTask {
+  height: 150px;
+  border-radius: 10px;
+  margin: 10px;
+  width: 400px;
+  text-align: center;
+  border: 3px solid silver;
+  border-style: inset;
+}
+
+.containerDate {
+  height: 35px;
+  border-radius: 10px;
+  margin: 10px;
+  width: 400px;
+  text-align: center;
+  border: 3px solid silver;
+  border-style: inset;
+}
+
+.containerButton {
+  height: 60px;
+  border-radius: 25px;
+  margin-top: 10px;
+  width: 200px;
+  background-color: aqua;
+  border: 5px solid silver;
+  border-style: outset;
+  box-shadow: 3px 3px 5px;
+  font-weight: bold;
+  font-size: 1.05em;
+}
+.containerButton:active {
+  border-style: inset;
+  background-color: rgb(125, 218, 218);
+}
+
+h3 {
+  color: #0a1063;
+}
+
+@media (max-width: 650px) {
+  .containerTitle {
+    width: 200px;
+  }
+  .containerTask {
+    width: 200px;
+    height: 80px;
+  }
+  .containerDate {
+    width: 200px;
+  }
+}

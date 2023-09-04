@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form'
 import { useLocation } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
-import styles from './module.modifier.css'
+import styles from './modifer.module.css'
 import ButtonBackMain from '../../components/ButtonBackMain'
 
 const Modifier = () => {
@@ -54,7 +54,7 @@ const onSubmit = result => {
 	return (
 		<div>
 
-			<form className='formModifier' onSubmit={ handleSubmit(onSubmit) }>
+			<form className={styles.forModifier} onSubmit={ handleSubmit(onSubmit) }>
 
 				<h2>Tarea</h2>
 
@@ -74,7 +74,7 @@ const onSubmit = result => {
 				<h2>Descripción</h2>
 
 				<input type='text' placeholder={ taskId.task }
-				className='containerModifierTask'
+				className={styles.containerModifierTask}
 				{...register('task', {
 					required: {
 						value: true,
@@ -87,7 +87,7 @@ const onSubmit = result => {
 				<h2>Fecha</h2>
 
 				<p>
-					<input type='date' className='containerModifierDate'
+					<input type='date' className={styles.containerModifierDate}
 					{...register('limit', {
 						requiered: {
 							value: true,
@@ -98,7 +98,7 @@ const onSubmit = result => {
 					{ errors.date && <span className='errors'>{ errors.date.message }</span> }
 				</p>
 
-				<button className='buttonModifier'>Modifier task</button>
+				<button className={styles.buttonModifier}>Modifier task</button>
 
 			</form>
 

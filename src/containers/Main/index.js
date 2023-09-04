@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from './main.module.css'
 
 import Header from '../Header'
 import Forms from '../Forms'
@@ -7,7 +8,7 @@ import ListItems from '../ListItems';
 const Main = () => {
 
 	return (
-		<div>
+		<div className={styles.containerMain}>
 
 			<Header />
 			<Forms />
