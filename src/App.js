@@ -1,4 +1,6 @@
 import './App.css';
+// import 'dotenv/config';
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Modifier from './containers/Modifier';
@@ -11,7 +13,7 @@ function App() {
 			<BrowserRouter>
 
 				<Routes>
-					
+
 					<Route path='/' element={<Main />} />
 					<Route path='/modifier' element={<Modifier />} />
 

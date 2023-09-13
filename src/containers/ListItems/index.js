@@ -7,7 +7,7 @@ const ListItems = () => {
   //dentro del parentesis del useState ponemos unos corches, porque vamos a guardar el array
 
   useEffect(() => {
-    fetch("http://localhost:3000/task/")
+    fetch(`${process.env.REACT_APP_URL}/task/`)
       .then((res) => {
         return res.json();
       })
