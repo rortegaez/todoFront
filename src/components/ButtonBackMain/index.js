@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
-import style from './module.buttonbackmain.css'
+import style from './buttonBackMain.module.css'
 
 const ButtonBackMain = () => {
 
@@ -13,7 +13,7 @@ const ButtonBackMain = () => {
 
 	return (
 		<>
-			<button className='buttonBack' onClick={ handleBack }>Back</button>
+			<button className={style.buttonBack} onClick={ handleBack }>Back</button>
 		</>
 	)
 }

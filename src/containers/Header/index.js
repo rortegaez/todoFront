@@ -1,11 +1,12 @@
 import React from 'react'
-import styles from './module.header.css'
+
+import style from './header.module.css'
 
 const Header = () => {
 	return (
-		<div className='containerHeader'>
+		<div>
 
-			<h1> Todo App </h1>
+			<h1 className={style.title}> Todo App </h1>
 
 		</div>
 	)
