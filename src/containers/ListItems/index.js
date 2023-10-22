@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import Card from "../../components/Card";
 import styles from "./listItems.module.css";
 
+const config = require('../../config.js')
+
 const ListItems = () => {
   const [taskList, setTaskList] = useState([]);
   //dentro del parentesis del useState ponemos unos corches, porque vamos a guardar el array
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_URL}/tareas`)
+    fetch(`${process.env.config.REACT_APP_URL}/tareas`)
       .then((res) => {
         return res.json();
       })
