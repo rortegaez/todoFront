@@ -12,10 +12,10 @@ const Forms = () => {
     formState: { errors },
   } = useForm();
 
-  console.log("URL from env:", process.env.config.REACT_APP_URL);
+  console.log("URL from env:", config.REACT_APP_URL);
   const onSubmit = (result) => {
     console.log(result);
-    fetch(`${process.env.config.REACT_APP_URL}/tareas`, {
+    fetch(`${config.REACT_APP_URL}/tareas`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
