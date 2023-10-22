@@ -5,6 +5,7 @@ import trash from '../Imagenes/trash.png'
 import pencil from '../Imagenes/pencil.png'
 
 import styles from './card.module.css'
+const config = require('../../config.js')
 
 const Card = ({ taskData }) => {
 
@@ -13,7 +14,7 @@ const Card = ({ taskData }) => {
 	const navigate = useNavigate()
 
 	const handleClick = (_id) => {
-		fetch(`${process.env.REACT_APP_URL}/tareas/${_id}`, {
+		fetch(`${process.env.config.REACT_APP_URL}/tareas/${_id}`, {
 			method: 'DELETE'
 		})
 		.then(res => {

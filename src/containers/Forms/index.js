@@ -1,6 +1,8 @@
 import { useForm } from "react-hook-form";
 import styles from "./forms.module.css";
 
+const config = require('../../config.js')
+
 //import myDate from '../../function/myDate'
 
 const Forms = () => {

@@ -6,6 +6,8 @@ import { useEffect, useState } from 'react'
 import styles from './modifer.module.css'
 import ButtonBackMain from '../../components/ButtonBackMain'
 
+const config = require('../../config.js')
+
 const Modifier = () => {
 
 	const { reset, register, handleSubmit, formState: { errors } } = useForm()
@@ -18,7 +20,7 @@ const Modifier = () => {
 	const date = new Date(taskId.limit).toLocaleDateString('en-GB').split('/').reverse().join('-')
 
 useEffect(() => {
-	fetch(`${process.env.REACT_APP_URL}/tareas/${idx}`)
+	fetch(`${process.env.config.REACT_APP_URL}/tareas/${idx}`)
 	.then(res => {
 		return res.json()
 	})
@@ -37,7 +39,7 @@ useEffect(() => {
 
 const onSubmit = result => {
 	console.log('cambio', result)
-	fetch(`${process.env.REACT_APP_URL}/tareas/${idx}`, {
+	fetch(`${process.env.config.REACT_APP_URL}/tareas/${idx}`, {
 		method: 'PUT',
 		headers: {
 			'Content-Type': 'application/json'
