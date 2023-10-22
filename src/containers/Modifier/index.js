@@ -18,7 +18,7 @@ const Modifier = () => {
 	const date = new Date(taskId.limit).toLocaleDateString('en-GB').split('/').reverse().join('-')
 
 useEffect(() => {
-	fetch(`${process.env.REACT_APP_URL}/task/${idx}`)
+	fetch(`${process.env.REACT_APP_URL}/tareas/${idx}`)
 	.then(res => {
 		return res.json()
 	})
@@ -37,7 +37,7 @@ useEffect(() => {
 
 const onSubmit = result => {
 	console.log('cambio', result)
-	fetch(`${process.env.REACT_APP_URL}/task/${idx}`, {
+	fetch(`${process.env.REACT_APP_URL}/tareas/${idx}`, {
 		method: 'PUT',
 		headers: {
 			'Content-Type': 'application/json'

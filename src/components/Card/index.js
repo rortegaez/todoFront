@@ -13,7 +13,7 @@ const Card = ({ taskData }) => {
 	const navigate = useNavigate()
 
 	const handleClick = (_id) => {
-		fetch(`${process.env.REACT_APP_URL}/task/${_id}`, {
+		fetch(`${process.env.REACT_APP_URL}/tareas/${_id}`, {
 			method: 'DELETE'
 		})
 		.then(res => {

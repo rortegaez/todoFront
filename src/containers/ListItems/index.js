@@ -7,7 +7,7 @@ const ListItems = () => {
   //dentro del parentesis del useState ponemos unos corches, porque vamos a guardar el array
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_URL}/task/`)
+    fetch(`${process.env.REACT_APP_URL}/tareas`)
       .then((res) => {
         return res.json();
       })
@@ -21,8 +21,8 @@ const ListItems = () => {
 
   return (
     <div className={styles.containerListItems}>
-      {taskList.map((task) => (
-        <Card taskData={task} />
+      {taskList.map((task, index) => (
+        <Card taskData={task} key={index} />
       ))}
     </div>
   );

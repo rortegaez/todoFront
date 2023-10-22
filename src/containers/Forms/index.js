@@ -13,7 +13,7 @@ const Forms = () => {
   console.log("URL from env:", process.env.REACT_APP_URL);
   const onSubmit = (result) => {
     console.log(result);
-    fetch(`${process.env.REACT_APP_URL}/task`, {
+    fetch(`${process.env.REACT_APP_URL}/tareas`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -49,7 +49,7 @@ const Forms = () => {
         />
         {errors.title && <span clasName="errors">{errors.title.message}</span>}
 
-        <input
+        <textarea
           type="text"
           placeholder="tarea"
           className={styles.containerTask}
